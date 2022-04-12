@@ -8,6 +8,52 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <header>
+        <img  id ="header-wrapper" src="https://images.unsplash.com/photo-1562307534-a03738d2a81a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" >
+        <h1>Company name</h1>
+    </header>
     <h1>this is some text in the body</h1>
+
+    <section>
+        <p class = "text-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto error facilis ab sed blanditiis? Quia eum vero temporibus fugit tenetur delectus placeat dolorum similique reiciendis, velit iure dolor molestias dolores, soluta amet debitis et quod assumenda, ex ipsum? Natus laboriosam error assumenda molestias quidem eligendi asperiores autem culpa dolorum quasi?</p>
+    </section>
+
+    <aside>
+        sidebar
+    </aside>
+
+    <footer class = "text-container">
+        &copy; 2022. All Rights Reserved
+    </footer>
+
+    <div id="timer"></div>
+    <script type="text/javascript">
+    function updateTimer() {
+        future = Date.parse("May 16, 2022 09:00:00");
+        now = new Date();
+        diff = future - now;
+    
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor(diff / (1000 * 60 * 60));
+        mins = Math.floor(diff / (1000 * 60));
+        secs = Math.floor(diff / 1000);
+    
+        d = days;
+        h = hours - days * 24;
+        m = mins - hours * 60;
+        s = secs - mins * 60;
+    
+        document.getElementById("timer")
+            .innerHTML =
+            '<div>' + d + '<span>Days</span></div>' +
+            '<div>' + h + '<span>Hours</span></div>' +
+            '<div>' + m + '<span>Minutes</span></div>' +
+            '<div>' + s + '<span>Seconds</span></div>';
+    }
+    setInterval('updateTimer()', 1000);
+    </script>
+
+         
+
 </body>
 </html>
